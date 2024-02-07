@@ -1,0 +1,24 @@
+# Ignore the pack directory where plugins are stored if you're using native package loading
+pack/
+plugin/
+!after/plugin/
+
+# Ignore swap, backup, and undo files
+*.swp
+*.bak
+*.undo
+
+# Ignore session files
+Session.vim
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore files related to local history plugin
+.local_history/
+
+# Optionally, ignore log files and Neovim server files
+*.log
+.nvimlog
+
