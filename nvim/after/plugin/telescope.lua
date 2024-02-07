@@ -4,6 +4,7 @@ function SearchInDotFiles()
     builtin.find_files({
         prompt_title = 'Dotfiles',
         cwd = 'C:/x/',
+        find_command = { 'rg', '--files', '--hidden', '--no-ignore', '--glob', '!.git' },
     })
 end
 
