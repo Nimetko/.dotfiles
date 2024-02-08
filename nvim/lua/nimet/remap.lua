@@ -3,6 +3,9 @@ print("Hello from remap")
 -- Set the 'leader' key to a space for creating custom shortcuts
 vim.g.mapleader = " "
 
+-- make sure copy and paste works with the system clipboard
+vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+
 -- bind next buffer and previous buffer
 vim.api.nvim_set_keymap('n', 'L', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'H', ':bprevious<CR>', { noremap = true, silent = true })
