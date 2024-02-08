@@ -3,7 +3,7 @@ local builtin = require('telescope.builtin')
 function SearchInDotFiles()
     builtin.find_files({
         prompt_title = 'Dotfiles',
-        cwd = 'C:/x/',
+        cwd = '~/x/',
         find_command = { 'rg', '--files', '--hidden', '--no-ignore', '--glob', '!.git' },
     })
 end
