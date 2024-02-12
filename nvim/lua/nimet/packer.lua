@@ -74,6 +74,8 @@ require('packer').startup(function()
 	-- 		{'L3MON4D3/LuaSnip'},
 	-- 	}
 	-- }
+
+    -- the last commented out block is the one that works
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',

@@ -112,7 +112,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Normal mode binding for formatting code using Language Server Protocol
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Normal mode bindings for navigating through quickfix and location lists
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

@@ -7,3 +7,10 @@ Set-Alias -Name v -Value nvim
 
 Set-Alias -Name cl -Value clear
 
+function Start-Explorer { Start-Process explorer}
+Set-Alias -Name desktop -Value Start-Explorer
+
+function Stop-Explorer { Stop-Process -Name explorer }
+Set-Alias -Name nodesktop -Value Stop-Explorer
+
+
