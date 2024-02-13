@@ -5,6 +5,9 @@ Set-Alias -Name lf -Value '~\x\scripts\windows\FuzzyFinderInDirectory.ps1'
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name v -Value nvim
 
+# time management
+Set-Alias -Name alarm -Value '~\x\scripts\alarm.bat'
+
 Set-Alias -Name cl -Value clear
 
 function Start-Explorer { Start-Process explorer}
