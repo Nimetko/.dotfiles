@@ -16,4 +16,33 @@ Set-Alias -Name desktop -Value Start-Explorer
 function Stop-Explorer { Stop-Process -Name explorer }
 Set-Alias -Name nodesktop -Value Stop-Explorer
 
+#git
+Set-Alias -Name g -Value git
+
+function Git-CommitWithMessage {
+    param(
+        [string]$Message
+    )
+    git commit -m $Message
+}
+Set-Alias -Name gicm -Value Git-CommitWithMessage
+
+function Git-Status {
+    git status
+}
+Set-Alias -Name gs -Value Git-Status
+
+
+function Git-AddAll {
+    git add .
+}
+Set-Alias -Name gaa -Value Git-AddAll
+
+function Git-Add {
+    param(
+        [string]$File
+    )
+    git add $File
+}
+Set-Alias -Name ga -Value Git-Add
 
