@@ -4,3 +4,4 @@ bindkey -s ^f "~/x/scripts/tmux-sessionizer\n"
 
 echo "Hello from zsh_profile"
 
+# alias v="nvim"

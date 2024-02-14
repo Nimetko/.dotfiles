@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+# If you come from bsh you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -120,6 +120,11 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias v="nvim"
+alias update="~/x/scripts/update-repositories.sh" 
+alias status="~/x/scripts/status-repositories.sh"
+alias push="~/x/scripts/auto-push-repos.sh"
 
 # vim like terminal
 # bindkey -v
