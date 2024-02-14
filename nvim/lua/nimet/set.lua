@@ -14,8 +14,17 @@ vim.opt.wrap = false -- don't wrap lines
 
 vim.opt.swapfile = false -- don't create swap files
 vim.opt.backup = false -- don't create backup files
--- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- set undo directory
+
+local utils = require('nimet/utils')
+
+local is_windows = utils.isWindows()
+
+if is_windows then
 vim.opt.undodir = os.getenv("USERPROFILE") .. "\\.vim\\undodir"
+else
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- set undo directory
+end
+
 vim.opt.undofile = true -- enable undo files
 
 vim.opt.hlsearch = true -- don't highlight search results

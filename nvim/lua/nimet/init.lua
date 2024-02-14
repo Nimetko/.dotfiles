@@ -3,10 +3,11 @@ print("Hello from Nimet lua file")
 
 require('nimet/packer')
 
+local utils = require('nimet/utils')
 -- Use powershell if os is windows:
 require('toggleterm').setup{
   -- other options...
-  shell = vim.loop.os_uname().sysname == "Windows_NT" and 'powershell.exe' or vim.o.shell,
+  shell =  utils.isWindows() and 'powershell.exe' or vim.o.shell,
   -- other settings...
 }
 
