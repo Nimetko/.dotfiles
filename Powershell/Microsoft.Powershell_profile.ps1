@@ -7,6 +7,7 @@ Set-Alias -Name v -Value nvim
 
 # time management
 Set-Alias -Name alarm -Value '~\x\scripts\alarm.bat'
+Set-Alias -Name focus -Value '~\x\scripts\focus.bat'
 
 Set-Alias -Name cl -Value clear
 
