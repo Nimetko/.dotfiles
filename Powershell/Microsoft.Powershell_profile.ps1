@@ -10,7 +10,7 @@ Set-Alias -Name alarm -Value '~\x\scripts\alarm.bat'
 Set-Alias -Name focus -Value '~\x\scripts\focus.bat'
 
 # shutdown pc
-Set-Alias -Name shutdown -Value {shutdown /s /f /t 0}
+# Set-Alias -Name shutdown -Value {shutdown /s /f /t 0}
 
 Set-Alias -Name cl -Value clear
 
