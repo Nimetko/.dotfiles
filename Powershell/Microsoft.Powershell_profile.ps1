@@ -22,7 +22,6 @@ Set-Alias -Name nodesktop -Value Stop-Explorer
 
 #git
 Set-Alias -Name g -Value git
-Set-Alias -Name gi -Value git
 
 function Git-CommitWithMessage {
     param(
