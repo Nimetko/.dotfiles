@@ -22,6 +22,7 @@ Set-Alias -Name nodesktop -Value Stop-Explorer
 
 #git
 Set-Alias -Name g -Value git
+Set-Alias -Name gi -Value git
 
 function Git-CommitWithMessage {
     param(
@@ -34,13 +35,18 @@ Set-Alias -Name gicm -Value Git-CommitWithMessage
 function Git-Status {
     git status
 }
-Set-Alias -Name gs -Value Git-Status
+Set-Alias -Name gis -Value Git-Status
+
+function Git-Push {
+    git push
+}
+Set-Alias -Name gip -Value Git-Push
 
 
 function Git-AddAll {
     git add .
 }
-Set-Alias -Name gaa -Value Git-AddAll
+Set-Alias -Name giaa -Value Git-AddAll
 
 function Git-Add {
     param(
@@ -48,5 +54,5 @@ function Git-Add {
     )
     git add $File
 }
-Set-Alias -Name ga -Value Git-Add
+Set-Alias -Name gia -Value Git-Add
 
