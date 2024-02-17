@@ -1,5 +1,29 @@
 # Neovim
 
+
+## Instalation
+
+### Windows
+winget
+install Neovim.Neovim
+
+or choco:
+choco install neovim
+
+install rigrep to make telesckope work:
+$ winget install BurntSushi.ripgrep.MSVC
+$ choco install ripgrep
+
+
+make symbolic link for nvim settings:
+
+for example:
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\nvim" -Target "$env:USERPROFILE\x\nvim"
+
+Open nvim (it will display errors)
+run: :PackerInstall
+
+
 Shortcuts overview for VSCode and NeoVim
 
 ## Vim movements
