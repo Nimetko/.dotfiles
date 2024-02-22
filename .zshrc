@@ -125,6 +125,7 @@ alias v="nvim"
 alias update="~/x/scripts/update-repositories.sh" 
 alias status="~/x/scripts/status-repositories.sh"
 alias push="~/x/scripts/auto-push-repos.sh"
+alias cl="clear"
 
 # vim like terminal
 # bindkey -v
