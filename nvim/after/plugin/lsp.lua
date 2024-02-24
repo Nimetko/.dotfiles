@@ -73,9 +73,19 @@ lsp_config["dartls"].setup({
 -- require'lspconfig'.omnisharp.setup{
 lsp_config["omnisharp"].setup{
   on_attach = on_attach,
-  -- cmd = { "<path-to-omnisharp>/run", "--languageserver" , "--hostPID", tostring(pid) },
-  -- cmd = { "C:/source/omnisharp/omnisharp/Omnisharp.exe", "--languageserver"},
-  cmd = { "C:/Users/janbo/.omnisharp/Omnisharp.exe", "--languageserver"},
+  --
+  --
+  --
+  --
+  -- cmd = { "C:/Users/janbo/.omnisharp/Omnisharp.exe", "--languageserver"},
+  cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver"},
+
+
+
+
+
+
+
   -- cmd = { "C:/source/omnisharp/omnisharp/Omnisharp.exe" },
   -- More configuration options can be added here
 }
