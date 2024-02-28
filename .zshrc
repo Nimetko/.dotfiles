@@ -6,6 +6,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:$HOME/.local/bin/"
 export PATH="$PATH:/Users/jan/.local/bin"
 
+# Add dotnet to Path
+# export PATH="$PATH:/usr/local/share/dotnet"
+export PATH="$HOME/.dotnet:$PATH"
+
 # Start tmux on shell start-up if not already running
 if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
@@ -125,6 +129,7 @@ alias v="nvim"
 alias update="~/x/scripts/update-repositories.sh" 
 alias status="~/x/scripts/status-repositories.sh"
 alias push="~/x/scripts/auto-push-repos.sh"
+alias clone="~/x/scripts/clone-repo-fzf.sh"
 alias cl="clear"
 
 # vim like terminal
