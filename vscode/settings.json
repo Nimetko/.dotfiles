@@ -49,6 +49,11 @@
         // "before": ["C-n"],
         "commands": ["workbench.explorer.fileView.focus"]
       },
+      //git
+      {
+        "before": ["leader", "g", "s"],
+        "commands": ["workbench.view.scm"]
+      },
 {
 "key": "ctrl+n",
 "command": "explorer.newFile",
