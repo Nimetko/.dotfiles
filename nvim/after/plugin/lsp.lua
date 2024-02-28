@@ -69,27 +69,38 @@ lsp_config["dartls"].setup({
   },
 })
 
--- pasted start
--- require'lspconfig'.omnisharp.setup{
+
+
+
+
+local utils = require('nimet/utils')
+local is_windows = utils.isWindows()
+
+-- Assuming lsp_config and on_attach are defined elsewhere in your script
 lsp_config["omnisharp"].setup{
-  on_attach = on_attach,
-  --
-  --
-  --
-  --
-  -- cmd = { "C:/Users/janbo/.omnisharp/Omnisharp.exe", "--languageserver"},
-  cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver"},
-
-
-
-
-
-
-
-  -- cmd = { "C:/source/omnisharp/omnisharp/Omnisharp.exe" },
-  -- More configuration options can be added here
+  on_attach = on_attach
 }
--- pasted end
+
+if is_windows then
+  lsp_config["omnisharp"].cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" }
+  -- lsp_config["omnisharp"].cmd = { "C:/Users/janbo/.omnisharp/Omnisharp.exe", "--languageserver" }
+else
+  lsp_config["omnisharp"].cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" }
+end
+
+
+
+-- local utils = require('nimet/utils')
+-- local is_windows = utils.isWindows()
+-- lsp_config["omnisharp"].setup{
+--   on_attach = on_attach,
+
+-- if is_windows then
+--   cmd = { "C:/Users/janbo/.omnisharp/Omnisharp.exe", "--languageserver"},
+-- else
+--   cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver"},
+-- end
+-- }
 
 
 lsp_zero.setup()
