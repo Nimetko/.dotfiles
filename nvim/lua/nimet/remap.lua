@@ -65,12 +65,12 @@ vim.keymap.set('n', ';', ':', { noremap = true, silent = true })
 vim.cmd('syntax on')
 
 -- when in c# filetype, run dotnet run from leader + r
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "cs",
-    callback = function()
-        vim.api.nvim_buf_set_keymap(0, 'n', '<C-i>', ':!dotnet run<CR>', { noremap = true, silent = true })
-    end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "cs",
+--     callback = function()
+--         vim.api.nvim_buf_set_keymap(0, 'n', '<C-i>', ':!dotnet run<CR>', { noremap = true, silent = true })
+--     end,
+-- })
 
 -- Normal mode custom shortcuts for saving and quitting
 vim.keymap.set("n", "<leader>w", ":w<CR>")
