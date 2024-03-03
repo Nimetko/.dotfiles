@@ -27,7 +27,6 @@
       "command": "workbench.action.terminal.kill",
       "when": "terminalFocus"
     },
-
     {
         "key": "ctrl+0",
         "command": "workbench.actions.view.problems"
