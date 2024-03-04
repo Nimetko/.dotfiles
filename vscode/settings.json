@@ -104,17 +104,28 @@
         "before": ["<leader>", "c", "e"],
         "commands": ["editor.action.showErrorsWarnings"]
       },
-      // go to next error
+      // go to next error in all files
       {
         // "before": ["<leader>", "c", "n"],
         "before": ["[", "d"],
         "commands": ["editor.action.marker.nextInFiles"]
       },
-      // go to previous error
+      // go to previous error in all files
       {
         "before": ["]", "d"],
         "commands": ["editor.action.marker.prevInFiles"]
       },
+
+      // go to next error in current file
+      {
+        "before": ["<leader>", "c", "n"],
+        "commands": ["editor.action.marker.next"]
+      },
+      // go to previous error in current file
+      {
+        "before": ["<leader>", "c", "p"],
+        "commands": ["editor.action.marker.prev"]
+      }, 
       {
         "before": ["<leader>", "v", "r"],
         "commands": ["editor.action.rename"]
