@@ -91,9 +91,4 @@
       // "command": "workbench.action.tasks.test"
       "command": "workbench.action.tasks.reRunTask"
     },
-    {
-    "key": "space f g",
-    "command": "workbench.action.findInFiles",
-    "when": "editorTextFocus"
-    },
   ]
