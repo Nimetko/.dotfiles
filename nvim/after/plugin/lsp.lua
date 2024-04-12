@@ -91,11 +91,11 @@ lsp_config["dartls"].setup({
 -- local utils = require('nimet/utils')
 -- local is_windows = utils.isWindows()
 
--- if is_windows then
---   lsp_config["omnisharp"].cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" }
+if is_windows then
+  lsp_config["omnisharp"].cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" }
 -- else
---   lsp_config["omnisharp"].cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" }
--- end
+  -- lsp_config["omnisharp"].cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" }
+end
 
 -- lsp_config["omnisharp"].setup{
 --   on_attach = on_attach
