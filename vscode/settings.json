@@ -170,4 +170,7 @@
       "markdown": false,
       "scminput": false
     },
+    "workbench.editorAssociations": {
+      "*.dll": "default"
+    },
   }
