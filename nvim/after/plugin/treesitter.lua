@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "javascript", "lua", "vim", "vimdoc", "query", "c_sharp", "dart" },
+	ensure_installed = { "javascript", "lua", "vim", "vimdoc", "query", "c_sharp", "dart", "json"},
 
 	sync_install = false,
 

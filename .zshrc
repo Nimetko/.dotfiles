@@ -1,6 +1,10 @@
 # If you come from bsh you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Gems for lego project
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:$HOME/.local/bin/"
@@ -16,7 +20,7 @@ if [ -z "$TMUX" ]; then
 fi
 
 # run tmux-sessionazer.sh on c-f (ctrl+f)
-bindkey -s "^f" "~/x/scripts/.tmux-sessionizer\n"
+bindkey -s "^f" "~/x/scripts/tmux-sessionizer\n"
 
 
 # if [ -f ~/.zsh_profile ]; then
