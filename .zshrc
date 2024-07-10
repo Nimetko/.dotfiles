@@ -135,6 +135,7 @@ alias status="~/x/scripts/status-repositories.sh"
 alias push="~/x/scripts/auto-push-repos.sh"
 alias clone="~/x/scripts/clone-repo-fzf.sh"
 alias cl="clear"
+alias gs="git status"
 
 # vim like terminal
 # bindkey -v
