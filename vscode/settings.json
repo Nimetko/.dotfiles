@@ -168,4 +168,5 @@
     "workbench.editorAssociations": {
       "*.dll": "default"
     },
+    "github.copilot.editor.enableAutoCompletions": true,
   }
