@@ -92,15 +92,15 @@
       "command": "workbench.action.tasks.reRunTask"
     },
     {
-        // find in files grep
+    // find in files grep
       "key": "space f g",
       "command": "workbench.action.findInFiles"
-      "when": "editorTextFocus && vim.active && vim.use<C-space>f f==normal"
-    },
+        "when": "vim.active && vim.mode == 'Normal'"
+   },
     // fing file
     {
         "key": "space f f",
         "command": "workbench.action.quickOpen",
-        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+        "when": "vim.active && vim.mode == 'Normal'"
     },
   ]
