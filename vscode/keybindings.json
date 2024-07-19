@@ -91,4 +91,16 @@
       // "command": "workbench.action.tasks.test"
       "command": "workbench.action.tasks.reRunTask"
     },
+    {
+    // find in files grep
+     // "key": "space f g",
+     // "command": "workbench.action.findInFiles"
+    //    "when": "vim.active && vim.mode == 'Normal'"
+   //},
+    // fing file
+    //{
+      //  "key": "space f f",
+       // "command": "workbench.action.quickOpen",
+        //"when": "vim.active && vim.mode == 'Normal'"
+    //},
   ]
