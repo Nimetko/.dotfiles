@@ -18,3 +18,5 @@ require('nimet/set')
 -- Additional configurations (add your desired configurations below)
 -- For example:
 -- vim.o.number = true  -- Show line numbers
+
+require('nimet/customCommands')
