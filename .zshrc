@@ -137,5 +137,7 @@ alias clone="~/x/scripts/clone-repo-fzf.sh"
 alias cl="clear"
 alias gs="git status"
 
+alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh" 
+
 # vim like terminal
 # bindkey -v
