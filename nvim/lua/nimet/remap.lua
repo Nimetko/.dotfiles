@@ -87,15 +87,6 @@ vim.keymap.set("n", "<leader>s", "<C-w-s>")
 -- vim.keymap.set("n", "<leader>v", "<C-w-v>")
 
 
--- Telescope plugin key bindings for various find and search functions
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fi', builtin.git_files, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
-
 
 -- Key binding to open a terminal in the bottom split with PowerShell
 --vim.api.nvim_set_keymap('n', '<leader>t', ':botright 10split | terminal powershell<CR>', { noremap = true, silent = true })

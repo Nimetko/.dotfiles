@@ -1,3 +1,5 @@
+require('nimet/set')
+require('nimet/remap')
 require("nimet.lazy_init")
 
 local utils = require('nimet/utils')
@@ -8,9 +10,6 @@ require('toggleterm').setup{
   -- other settings...
 }
 
-require('nimet/remap')
-
-require('nimet/set')
 
 -- Additional configurations (add your desired configurations below)
 -- For example:
