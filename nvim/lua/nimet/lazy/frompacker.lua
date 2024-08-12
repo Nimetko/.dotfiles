@@ -1,5 +1,3 @@
-print("From packer")
-
 return {
     { "rose-pine/neovim", name = "rose-pine" },
 

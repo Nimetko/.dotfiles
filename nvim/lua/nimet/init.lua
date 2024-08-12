@@ -1,4 +1,3 @@
-print("Hello from Nimet lua file")
 -- init.lua
 
 -- require('nimet/packer')

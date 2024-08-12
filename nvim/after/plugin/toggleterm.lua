@@ -1,5 +1,3 @@
-print("Hello from Toggle Term file")
-
 require('toggleterm').setup{
   size = 20,
   open_mapping = [[<C-t>]], -- Example mapping to open toggleterm

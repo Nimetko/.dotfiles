@@ -1,5 +1,3 @@
-print("Loading set.lua")
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 

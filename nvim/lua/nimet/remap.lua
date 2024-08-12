@@ -1,5 +1,3 @@
-print("Hello from remap")
-
 -- Set the 'leader' key to a space for creating custom shortcuts
 vim.g.mapleader = " "
 
