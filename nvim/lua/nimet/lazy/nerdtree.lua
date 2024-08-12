@@ -1,3 +1,6 @@
+return {
+	'preservim/nerdtree',
+    config = function ()
 -- Toggle Nerdtree with ctr n
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '++', '<plug>NERDCommenterToggle', { noremap = true, silent = true })
@@ -14,4 +17,6 @@ vim.cmd[[
 
 -- find open file in nerdtree (nerdtree must be opened)
 vim.api.nvim_set_keymap('n', '<leader>nf', ':NERDTreeFind<CR>', { noremap = true, silent = true })
-
+        -- require("nerdtree").setup()
+    end
+}

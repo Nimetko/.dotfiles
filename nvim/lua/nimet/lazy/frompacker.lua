@@ -8,7 +8,6 @@ return {
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
 
-	'preservim/nerdtree',
 	'thosakwe/vim-flutter',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 	'tpope/vim-commentary',
