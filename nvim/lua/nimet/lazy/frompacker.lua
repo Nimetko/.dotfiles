@@ -11,7 +11,6 @@ return {
 	'preservim/nerdtree',
 	'thosakwe/vim-flutter',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-	'mbbill/undotree',
 	'tpope/vim-commentary',
   {
 	  'VonHeikemen/lsp-zero.nvim',
