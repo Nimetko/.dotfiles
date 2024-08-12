@@ -1,7 +1,3 @@
--- init.lua
-
--- require('nimet/packer')
--- require("config.lazy")
 require("nimet.lazy_init")
 
 local utils = require('nimet/utils')
