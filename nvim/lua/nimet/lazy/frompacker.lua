@@ -11,7 +11,7 @@ return {
 	'preservim/nerdtree',
 	"tpope/vim-fugitive",
 	'thosakwe/vim-flutter',
-	'theprimeagen/harpoon',
+	-- 'theprimeagen/harpoon',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 	'mbbill/undotree',
 	'tpope/vim-commentary',
