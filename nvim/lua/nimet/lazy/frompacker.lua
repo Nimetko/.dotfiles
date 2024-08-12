@@ -1,4 +1,4 @@
-print("lazy lua loaded")
+print("From packer")
 
 return {
     { "rose-pine/neovim", name = "rose-pine" },
@@ -15,7 +15,7 @@ return {
 	'thosakwe/vim-flutter',
 	'theprimeagen/harpoon',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-	'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'},
+	'nvim-treesitter/nvim-treesitter', {build = ':TSUpdate'},
 	'mbbill/undotree',
 	'tpope/vim-commentary',
 	'github/copilot.vim',

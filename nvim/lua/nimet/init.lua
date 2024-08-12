@@ -1,7 +1,9 @@
 print("Hello from Nimet lua file")
 -- init.lua
 
-require('nimet/packer')
+-- require('nimet/packer')
+-- require("config.lazy")
+require("nimet.lazy_init")
 
 local utils = require('nimet/utils')
 -- Use powershell if os is windows:
