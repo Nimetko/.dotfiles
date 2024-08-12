@@ -14,8 +14,6 @@ return {
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 	'mbbill/undotree',
 	'tpope/vim-commentary',
-	'github/copilot.vim',
-
   {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
