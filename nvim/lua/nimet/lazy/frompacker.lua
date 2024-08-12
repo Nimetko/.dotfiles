@@ -9,7 +9,6 @@ return {
     },
 
 	'preservim/nerdtree',
-	"tpope/vim-fugitive",
 	'thosakwe/vim-flutter',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 	'mbbill/undotree',
