@@ -1,0 +1,7 @@
+# bindkey -s ^f "tmux-sessionizer \n" 
+bindkey -s ^f "~/x/scripts/tmux-sessionizer\n" 
+# bindkey -s ^f "hello\n" 
+
+echo "Hello from zsh_profile"
+
+# alias v="nvim"
