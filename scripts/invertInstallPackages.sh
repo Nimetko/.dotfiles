@@ -1,13 +1,14 @@
-brew uninstall ansible
-brew uninstall zsh
-brew uninstall fzf
-brew uninstall stow
-brew uninstall tmux
-brew uninstall nvim
-brew uninstall ripgrep
+# remove macos scripts
+rm -rf ~/x/scripts
 
 #uninstall oh my zsh
 yes | uninstall_oh_my_zsh
- 
-# remove macos scripts
-rm -rf ~/x/scripts
+
+brew uninstall lazygit
+brew uninstall ripgrep
+brew uninstall nvim
+brew uninstall tmux
+brew uninstall stow
+brew uninstall fzf
+brew uninstall zsh
+brew uninstall ansible
