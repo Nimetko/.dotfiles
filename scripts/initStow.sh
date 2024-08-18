@@ -1,11 +1,11 @@
 #!/bin/bash
-stow nvim
-stow tmux
-stow zsh
-stow zsh_profile
+stow -t ~ nvim 
+stow -t ~ tmux
+stow -t ~ zsh
+stow -t ~ zsh_profile
 
 # vscode
 mkdir -p "dotfiles/vscode/Library/Application Support/Code/User"
-stow vscode
+stow -t ~ vscode
 
 
