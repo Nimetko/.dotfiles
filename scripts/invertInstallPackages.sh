@@ -4,6 +4,7 @@ rm -rf ~/x/scripts
 #uninstall oh my zsh
 yes | uninstall_oh_my_zsh
 
+brew uninstall tldr
 brew uninstall lazygit
 brew uninstall ripgrep
 brew uninstall nvim
