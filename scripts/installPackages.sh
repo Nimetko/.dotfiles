@@ -11,7 +11,10 @@ brew install tmux
 brew install nvim
 brew install ripgrep
 brew install lazygit
+
+# nice to have
 brew install tldr
+brew install jp2a
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
