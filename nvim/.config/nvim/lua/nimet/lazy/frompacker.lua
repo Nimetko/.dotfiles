@@ -2,7 +2,6 @@ return {
     { "rose-pine/neovim", name = "rose-pine" },
 	'thosakwe/vim-flutter',
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-	'tpope/vim-commentary',
   {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
