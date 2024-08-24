@@ -1,0 +1,31 @@
+return {
+    --{
+    --    -- https://github.com/williamboman/mason.nvim
+    --    -- for installing language server
+    --    "williamboman/mason.nvim",
+    --    config = function()
+    --        require("mason").setup()
+    --    end
+    --},
+    --{
+    --    -- https://github.com/williamboman/mason-lspconfig.nvim (gap between mason and lspconfig) (good for ensure installed method)
+    --    "williamboman/mason-lspconfig.nvim",
+    --    config = function()
+    --        require("mason-lspconfig").setup({
+    --            ensure_installed = { "lua_ls" }
+    --        })
+    --    end
+    --},
+    --{
+    ---- nvim lspconfig -- setting keybindings and communcation between language server and neovim
+    --    "neovim/nvim-lspconfig",
+    --    config = function()
+    --        local lspconfig = require("lspconfig")
+    --        -- setting setup for different languages
+    --        --
+    --        -- setting setup for lua
+    --        lspconfig.lua_ls.setup({})
+    --        vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+    --    end
+    --}
+}
