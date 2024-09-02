@@ -132,3 +132,11 @@ vim.keymap.set('n', 'L', ':bnext<CR>', {noremap = true, silent = true})
 
 end)
 
+
+
+-- Set all jsons in snowplow projects, all schemas as jsons filetype.
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = {"*/schemas/*", "*/config-schemas/*"},
+    command = "set filetype=json"
+})
+
