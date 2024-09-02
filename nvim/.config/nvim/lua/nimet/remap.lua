@@ -54,7 +54,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -----------------------
 
 -- Remap ; to : in normal mode
-vim.keymap.set('n', ';', ':', { noremap = true, silent = true })
+-- vim.keymap.set('n', ';', ':', { noremap = true, silent = true })
 
 -- Text alligning
 
