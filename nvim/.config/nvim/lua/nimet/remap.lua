@@ -47,7 +47,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- copy all file
-vim.keymap.set({"n", "v"}, "<leader>%", [[:%+y<CR>]])
+vim.keymap.set({"n", "v"}, "<leader>%", [[:%y+<CR>]])
 
 -- Normal and visual mode mapping to delete text without yanking
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
