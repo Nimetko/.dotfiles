@@ -1,8 +1,8 @@
 -- Set the 'leader' key to a space for creating custom shortcuts
 vim.g.mapleader = " "
 
--- make sure copy and paste works with the system clipboard
-vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+-- -- make sure copy and paste works with the system clipboard
+-- vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
 
 -- bind next buffer and previous buffer
 vim.api.nvim_set_keymap('n', 'L', ':bnext<CR>', { noremap = true, silent = true })
@@ -45,6 +45,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Normal and visual mode mapping to yank text into the system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- copy all file
+vim.keymap.set({"n", "v"}, "<leader>%", [[:%+y<CR>]])
 
 -- Normal and visual mode mapping to delete text without yanking
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
