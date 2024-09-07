@@ -9,7 +9,6 @@ return {
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
         "L3MON4D3/LuaSnip",
-        "nvim-telescope/telescope-ui-select.nvim"
     },
 
     config = function()
