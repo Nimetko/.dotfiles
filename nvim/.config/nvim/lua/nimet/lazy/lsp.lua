@@ -1,22 +1,14 @@
 return {
-    "neovim/nvim-lspconfig",  -- The official plugin for configuring Neovim's built-in LSP (Language Server Protocol) client.
-
+    "neovim/nvim-lspconfig",
     dependencies = {
-        "williamboman/mason.nvim",  -- Mason is a Neovim plugin that allows you to easily install and manage LSP servers, DAP servers, linters, and formatters.
-        "williamboman/mason-lspconfig.nvim",  -- A bridge plugin that integrates Mason with nvim-lspconfig, making it easier to automatically configure and manage LSP servers installed via Mason.
-        -- we have ensureInstalled thasnk to this
-
-        "hrsh7th/cmp-nvim-lsp",  -- A completion source for nvim-cmp, providing LSP-based completions in the Neovim editor.
-        "hrsh7th/cmp-buffer",  -- A completion source for nvim-cmp that provides buffer (current file) based completions.
-        "hrsh7th/cmp-path",  -- A completion source for nvim-cmp that provides file path completions.
-        "hrsh7th/cmp-cmdline",  -- A completion source for nvim-cmp that provides command-line completions, enhancing the command-line experience in Neovim.
-        "hrsh7th/nvim-cmp",  -- A highly extensible completion plugin for Neovim, which supports various sources like LSP, buffer, path, etc.
-
-        "L3MON4D3/LuaSnip",  -- A Lua-based snippet engine for Neovim, allowing you to use and create code snippets for faster coding.
-        "saadparwaiz1/cmp_luasnip",  -- A completion source for nvim-cmp, providing LuaSnip-based completions in Neovim.
-
-        -- Extensible UI for Neovim notifications and LSP progress messages.
-        "j-hui/fidget.nvim",  -- A plugin that provides a small, fidget spinner-like UI element to display LSP progress and notifications, making it easier to track LSP-related tasks.
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-cmdline",
+        "hrsh7th/nvim-cmp",
+        "L3MON4D3/LuaSnip",
     },
 
     config = function()
@@ -26,112 +18,96 @@ return {
             "force",
             {},
             vim.lsp.protocol.make_client_capabilities(),
-            cmp_lsp.default_capabilities())
+            cmp_lsp.default_capabilities()
+        )
 
-        require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
-            --
-            -- ENSURE INSTALLED -- ensuring what language servers installing autimatically
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
+                "tsserver",
             },
-            -- ENSURE INSTALLED -- ensuring what language servers installing autimatically
-            --
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
+                        capabilities = capabilities,
+                        on_attach = on_attach, -- Add the on_attach function
                     }
                 end,
 
-                zls = function()
+                ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
-                    lspconfig.zls.setup({
-                        root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
+                    lspconfig.lua_ls.setup {
+                        capabilities = capabilities,
+                        on_attach = on_attach, -- Add the on_attach function
                         settings = {
-                            zls = {
-                                enable_inlay_hints = true,
-                                enable_snippets = true,
-                                warn_style = true,
-                            },
-                        },
-                    })
-                    vim.g.zig_fmt_parse_errors = 0
-                    vim.g.zig_fmt_autosave = 0
-
-                end,
-                --
-                -- Settting lsp communication with lua_ls language server --
-                --
-                -- ["lua_ls"] = function()
-                --     local lspconfig = require("lspconfig")
-                --     lspconfig.lua_ls.setup {
-                --         capabilities = capabilities,
-                --         settings = {
-                --             lua = {
-                --                 runtime = { version = "lua 5.1" },
-                --                 diagnostics = {
-                --                     globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
-                --                 }
-                --             }
-                --         }
-                --     }
-                -- end,
-                --
-                -- Settting lsp communication with lua_ls language server --
-                --
-
-
-                -- Omnisharp (C#) setup with Mono
-                omnisharp = function()
-                    -- Change this to your actual download path.
-                    -- local path_to_download = '/Users/dzfrias/.dotfiles/downloads/omnisharp-osx'
-                    local path_to_download = '/Users/janborovsky/omnisharp-osx-arm64-net6.0'
-                    require('lspconfig').omnisharp.setup {
-                        cmd = {
-                            'mono',
-                            '--assembly-loader=strict',
-                            path_to_download .. '/omnisharp/OmniSharp.exe',
-                        },
-                        -- Assuming you have an on_attach function. Delete this line if you don't.
-                        on_attach = on_attach,
-                        use_mono = true,
+                            Lua = {
+                                diagnostics = {
+                                    globals = { "vim" }
+                                }
+                            }
+                        }
                     }
                 end,
-
-
-                -- mono = function ()
-                --     -- Change this to your actual download path.
-                --     local path_to_download = '~/omnisharp-osx-arm64-net6.0/'
-                --     require('lspconfig').omnisharp.setup {
-                --         cmd = {
-                --             'mono',
-                --             '--assembly-loader=strict',
-                --             path_to_download .. '/omnisharp/OmniSharp.exe',
-                --         },
-                --         -- Assuming you have an on_attach function. Delete this line if you don't.
-                --         on_attach = on_attach,
-                --         use_mono = true,
-                --     }
-                -- end
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
             }
         })
+
+        -- Define your custom on_attach function to set LSP key mappings
+        local function myFunction(opts)
+            vim.keymap.set("n", "<leader>lsp", function() print("LSP") end)
+            vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+            vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+            vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+            vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+            vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+            vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+            vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+            vim.keymap.set("n", "gr", function() require('telescope.builtin').lsp_references({ use_quickfix = true }) end)
+            vim.keymap.set("n", "<leader>vr", function() vim.lsp.buf.rename() end, opts)
+            vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+            vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.formatting() end, opts)
+        end
+
+        -- On attach function for LSP key mappings
+        local on_attach = function(client, bufnr)
+            local opts = { noremap=true, silent=true, buffer=bufnr }
+            myFunction(opts)
+        end
+
+        -- Example of configuring dartls with a specific on_attach function
+        local lsp_config = require("lspconfig")
+        lsp_config["dartls"].setup({
+            on_attach = on_attach,
+            settings = {
+                dart = {
+                    analysisExcludedFolders = {
+                        vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+                        vim.fn.expand("$HOME/.pub-cache"),
+                        vim.fn.expand("/opt/homebrew/"),
+                        vim.fn.expand("$HOME/tools/flutter/"),
+                    },
+                },
+            },
+        })
+
+        -- Check if you are on Windows and configure Omnisharp accordingly
+        if vim.fn.has("win32") == 1 then
+            lsp_config["omnisharp"].setup({
+                cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" },
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+        else
+            lsp_config["omnisharp"].setup({
+                -- Uncomment and configure if on a different OS
+                -- cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" },
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+        end
+
+        ------- THIS IS RESPONSIBLE FOR SNIPSET ------
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -151,12 +127,14 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                    { name = 'buffer' },
-                })
+                { name = 'buffer' },
+            })
         })
+        ------- END OF THIS IS RESPONSIBLE FOR SNIPSET ------
 
+        -- Diagnostic configuration
         vim.diagnostic.config({
-            -- update_in_insert = true,
+            update_in_insert = true,
             float = {
                 focusable = false,
                 style = "minimal",
@@ -168,3 +146,4 @@ return {
         })
     end
 }
+
