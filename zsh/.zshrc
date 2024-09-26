@@ -134,8 +134,13 @@ alias update="~/x/scripts/update-repositories.sh"
 alias status="~/x/scripts/status-repositories.sh"
 alias push="~/x/scripts/auto-push-repos.sh"
 alias clone="~/x/scripts/clone-repo-fzf.sh"
+alias gch="~/x/scripts/checkout-fzf.sh"
+alias gme="~/x/scripts/merge-fzf.sh"
 alias cl="clear"
 alias gs="git status"
+alias gd="git diff"
+alias gl="git log"
+alias ga.="git add ."
 
 alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh" 
 
