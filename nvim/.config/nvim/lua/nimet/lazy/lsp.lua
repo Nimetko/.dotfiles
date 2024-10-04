@@ -7,7 +7,7 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
-        "hrsh7th/nvim-cmp",
+        "hrsh7th/nvim-cmp", -- SNIPSETS
         "L3MON4D3/LuaSnip",
     },
 
@@ -95,21 +95,13 @@ return {
             })
         end
 
-        ------- THIS IS RESPONSIBLE FOR SNIPSET ------
+        ----------------- SNIPSETS -----------------
         require("nimet.lazy.lsp.cmp_config").setup_cmp()
 
-        -- Diagnostic configuration
-        vim.diagnostic.config({
-            update_in_insert = true,
-            float = {
-                focusable = false,
-                style = "minimal",
-                border = "rounded",
-                source = "always",
-                header = "",
-                prefix = "",
-            },
-        })
+
+        ----------------- DIAGNOSTICS -----------------
+        require("nimet.lazy.lsp.diagnostic").setup_diagnostics()
     end
+
 }
 
