@@ -3,6 +3,23 @@ local cmp = require('cmp')
 
 local M = {}
 
+--- Setup completion for Neovim using nvim-cmp and luasnip
+-- 
+-- This function configures Neovim's cmp plugin to use luasnip for snippet 
+-- expansion and sets up custom key mappings for navigation and confirmation.
+-- It also defines the completion sources (LSP, buffer, and luasnip).
+--
+-- Key mappings:
+--  - <C-p>: Select previous completion item
+--  - <C-n>: Select next completion item
+--  - <C-y>: Confirm the selected completion
+--  - <C-Space>: Trigger completion
+--
+-- Sources:
+--  - LSP completions (nvim_lsp)
+--  - Snippets (luasnip)
+--  - Buffer contents (buffer)
+--
 function M.setup_cmp()
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 

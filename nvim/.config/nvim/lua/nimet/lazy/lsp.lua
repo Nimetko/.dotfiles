@@ -37,6 +37,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tsserver",
+                "csharp_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -79,21 +80,21 @@ return {
             },
         })
 
-        -- Check if you are on Windows and configure Omnisharp accordingly
-        if vim.fn.has("win32") == 1 then
-            lsp_config["omnisharp"].setup({
-                cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" },
-                on_attach = on_attach,
-                capabilities = capabilities,
-            })
-        else
-            lsp_config["omnisharp"].setup({
-                -- Uncomment and configure if on a different OS
-                -- cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" },
-                on_attach = on_attach,
-                capabilities = capabilities,
-            })
-        end
+        -- -- Check if you are on Windows and configure Omnisharp accordingly
+        -- if vim.fn.has("win32") == 1 then
+        --     lsp_config["omnisharp"].setup({
+        --         cmd = { "C:\\Users\\janbo\\.omnisharp\\Omnisharp.exe", "--languageserver" },
+        --         on_attach = on_attach,
+        --         capabilities = capabilities,
+        --     })
+        -- else
+        --     lsp_config["omnisharp"].setup({
+        --         -- Uncomment and configure if on a different OS
+        --         -- cmd = { "/Users/jan/x/work/omnisharp-roslyn/mono-packaging/run", "--languageserver" },
+        --         on_attach = on_attach,
+        --         capabilities = capabilities,
+        --     })
+        -- end
 
         ----------------- SNIPSETS -----------------
         require("nimet.lazy.lsp.cmp_config").setup_cmp()
