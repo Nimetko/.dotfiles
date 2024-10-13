@@ -10,6 +10,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:$HOME/.local/bin/"
 export PATH="$PATH:/Users/jan/.local/bin"
 
+#Flutter
+export PATH=$HOME/flutter/bin:$PATH
+
 # Add dotnet to Path
 # export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$HOME/.dotnet:$PATH"
@@ -142,6 +145,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gl="git log"
 alias ga.="git add ."
+alias grh="git reset --hard"
 
 alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh" 
 
