@@ -76,6 +76,7 @@ vim.cmd('syntax on')
 -- Normal mode custom shortcuts for saving and quitting
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>e", ":e!<CR>")
 
 -- Moving to different windows
 vim.keymap.set("n", "<leader>h", "<C-w>h")
