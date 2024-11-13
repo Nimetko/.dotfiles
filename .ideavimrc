@@ -1,0 +1,77 @@
+set ignorecase
+set incsearch
+set hlsearch
+
+set clipboard+=unnamed
+
+nnoremap <Space>w :action SaveAll<CR>
+nnoremap <Space>q :q<CR>
+
+nnoremap <Space>h <C-w>h
+nnoremap <Space>j <C-w>j
+nnoremap <Space>k <C-w>k
+
+nnoremap <Space>l <C-w>l
+
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+
+nnoremap gc :action CommentByLineComment <CR>
+vnoremap gc :action CommentByLineComment <CR>
+
+nnoremap gi :action GotoImplementation<CR>
+vnoremap gi :action GotoImplementation<CR>
+
+vnoremap <Space>ca :action ShowIntentionActions <CR>
+nnoremap <Space>ca :action ShowIntentionActions <CR>
+
+vnoremap <Space>cg :action Generate <CR>
+nnoremap <Space>cg :action Generate <CR>
+
+nnoremap gh :action ShowHoverInfo <CR>
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <space>zz :action ToggleDistractionFreeMode<CR>
+
+nnoremap <S-j> :action PreviousTab<CR>
+vnoremap <S-j> :action PreviousTab<CR>
+nnoremap <S-k> :action NextTab<CR>
+vnoremap <S-k> :action NextTab<CR>
+
+nnoremap <c-n> :action SelectInProjectView<CR>
+
+nnoremap <dl> :!gdb -ex run %<CR>
+
+
+nnoremap <C-p> :action GotoFile<CR>
+
+nnoremap <Space>ff :action GotoFile<CR>
+
+nnoremap <Space>fg :action FindInPath<CR>
+
+nnoremap <Space>vr :action RenameElement <CR>
+
+map <Space>fa :action GotoAction<CR>
+
+map [d <Action>(GotoNextError)
+map ]d <Action>(GotoPreviousError)
+
+"My Harpoon
+map <c-h> :action GoToTab1<CR>
+map <c-j> :action GoToTab2<CR>
+map <c-k> :action GoToTab3<CR>
+map <c-l> :action GoToTab4<CR>
+map <Space>a :action PinActiveTab<CR>
+map <c-e> :action ViewTabs<CR>
+
+map <Space>e :action CloseAllUnpinnedEditors<CR>
+
+nmap <Leader>y "+y
+
+
+
+
+"vnoremap <Space>cg :action RepeatPreviousRun<CR>
+"nnoremap <Space>cg :action RepeatPreviousRun<CR>
+
+"nnoremap <Space>cr :action ReformatAndCleanup <CR>
+"vnoremap <Space>cr :action ReformatCode <CR>
