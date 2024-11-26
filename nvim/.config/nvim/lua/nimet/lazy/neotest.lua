@@ -5,7 +5,7 @@ return {
             "nvim-neotest/nvim-nio",
             "nvim-lua/plenary.nvim",
             "antoinemadec/FixCursorHold.nvim",
-            "nvim-treesitter/nvim-treesitter",
+            -- "nvim-treesitter/nvim-treesitter",
             'sidlatau/neotest-dart'
             -- "nvim-neotest/nvim-nio",
             -- "nvim-neotest/neotest",
