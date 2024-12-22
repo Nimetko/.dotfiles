@@ -10,6 +10,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:$HOME/.local/bin/"
 export PATH="$PATH:/Users/jan/.local/bin"
 
+# Add pipx to PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+export EDITOR=nvim
+
 #Flutter
 export PATH=$HOME/flutter/bin:$PATH
 
@@ -21,10 +26,6 @@ export PATH="$HOME/.dotnet:$PATH"
 if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
-
-# run tmux-sessionazer.sh on c-f (ctrl+f)
-bindkey -s "^f" "~/x/scripts/tmux-sessionizer\n"
-
 
 # if [ -f ~/.zsh_profile ]; then
 #   source ~/.zsh_profile
@@ -148,6 +149,8 @@ alias ga.="git add ."
 alias grh="git reset --hard"
 
 alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh" 
+
+alias timer="~/x/scripts/timer.sh"
 
 
 # vim like terminal
