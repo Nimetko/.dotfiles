@@ -23,3 +23,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 mkdir ~/x
 git clone https://github.com/Nimetko/macos-scripts ~/x/scripts
 
+# nice to have
+brew install ranger
+
