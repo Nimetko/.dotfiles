@@ -25,3 +25,5 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+require('nimet/auto-indent')
+require('nimet/dart-indent-type')
