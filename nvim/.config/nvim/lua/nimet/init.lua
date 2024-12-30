@@ -17,13 +17,7 @@ require('toggleterm').setup{
 
 require('nimet/customCommands')
 
--- dart comments for commentary tpope plugin
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "dart",
-  callback = function()
-    vim.bo.commentstring = "// %s"
-  end,
-})
-
-require('nimet/auto-indent')
-require('nimet/dart-indent-type')
+-- dart
+require('nimet/config/dart/auto-indent')
+require('nimet/config/dart/custom-commentary-tpope')
+require('nimet/config/dart/dart-indent-type')
