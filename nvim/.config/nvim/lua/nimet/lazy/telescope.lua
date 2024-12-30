@@ -31,6 +31,9 @@ return {
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
         vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
+        vim.keymap.set("n", "<leader>fe", function()
+            require("telescope.builtin").diagnostics({ severity = vim.diagnostic.severity.ERROR })
+        end, { noremap = true, silent = true })
     end
 
     },
