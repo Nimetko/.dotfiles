@@ -20,7 +20,6 @@ return {
             cmp_lsp.default_capabilities()
         )
 
-
         --------------------- keymaps --------------------------
         local keymaps = require("nimet.lazy.lsp.keymaps")
 
@@ -36,7 +35,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-                "tsserver",
+                -- "tsserver",
                 "csharp_ls",
             },
             handlers = {
