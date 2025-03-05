@@ -36,7 +36,8 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 -- "tsserver",
-                "csharp_ls",
+                -- "csharp_ls",
+                "omnisharp_mono",
             },
             handlers = {
                 function(server_name) -- default handler (optional)

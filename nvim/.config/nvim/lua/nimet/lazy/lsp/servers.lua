@@ -3,6 +3,17 @@ local M = {}
 M.setup_servers = function(on_attach, capabilities)
     local lspconfig = require("lspconfig")
 
+    lspconfig.yamlls.setup {
+        settings = {
+            yaml = {
+                schemas = {
+                    ["https://json.schemastore.org/github-workflow.json"] = "*/.github/workflows/*",
+                    ["https://json.schemastore.org/github-action.json"] = "*/.github/actions/*",
+                },
+            }
+        }
+    }
+
     lspconfig.lua_ls.setup {
         capabilities = capabilities,
         on_attach = on_attach,

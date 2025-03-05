@@ -152,6 +152,13 @@ alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh"
 
 alias timer="~/x/scripts/timer.sh"
 
+alias zenon="open -a Hammerspoon" # zen mode on
+alias zenoff="pkill Hammerspoon" # zen mode off
+
+alias lazy="lazygit"
+
 
 # vim like terminal
 # bindkey -v
+export PATH="/Applications/Rider.app/Contents/MacOS:$PATH"
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
