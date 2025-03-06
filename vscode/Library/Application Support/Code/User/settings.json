@@ -12,13 +12,9 @@
   "update.showReleaseNotes": false,
   "zenMode.hideLineNumbers": false,
   "editor.lineNumbers": "relative",
-  "editor.quickSuggestions": {
-    "comments": "off",
-    "strings": "off",
-    "other": "off"
-  },
+  "editor.quickSuggestions": false,
   "omnisharp.useGlobalMono": "never",
-  // "omnisharp.path": "/path/to/unity/assemblies""vim.leader": "<Space>",
+  "omnisharp.path": "/path/to/unity/assemblies""vim.leader": "<Space>",
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
