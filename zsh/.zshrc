@@ -22,10 +22,15 @@ export PATH=$HOME/flutter/bin:$PATH
 # export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$HOME/.dotnet:$PATH"
 
-# Start tmux on shell start-up if not already running
-if [ -z "$TMUX" ]; then
+# # Start tmux on shell start-up if not already running
+# if [ -z "$TMUX" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi
+# Start tmux automatically ONLY when using Terminal.app
+if [[ -z "$TMUX" && "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
     tmux attach -t default || tmux new -s default
 fi
+
 
 # if [ -f ~/.zsh_profile ]; then
 #   source ~/.zsh_profile
