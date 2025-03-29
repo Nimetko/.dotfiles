@@ -25,4 +25,5 @@ git clone https://github.com/Nimetko/macos-scripts ~/x/scripts
 
 # nice to have
 brew install ranger
+brew install glow
 
