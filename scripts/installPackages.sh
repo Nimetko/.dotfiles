@@ -27,3 +27,5 @@ git clone https://github.com/Nimetko/macos-scripts ~/x/scripts
 brew install ranger
 brew install glow
 
+# Fun
+brew install cmatrix
