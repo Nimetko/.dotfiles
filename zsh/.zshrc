@@ -162,8 +162,22 @@ alias zenoff="pkill Hammerspoon" # zen mode off
 
 alias lazy="lazygit"
 
+# AI
+alias lama="ollama run llama3.2"
+alias llama="ollama run llama3.2"
+
+# Better cd navitation (see last directories) jump
+
+j() {
+  local dir
+  dir=$(dirs -v | fzf | awk '{print $2}')
+  if [ -n "$dir" ]; then
+    cd "$dir"
+  fi
+}
 
 # vim like terminal
 # bindkey -v
 export PATH="/Applications/Rider.app/Contents/MacOS:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+
