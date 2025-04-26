@@ -159,4 +159,16 @@ function ReindentFile()
     vim.fn.winrestview(view)
 end
 
+-- Clear file and go to insert mode
+vim.keymap.set('n', '<leader>I', function()
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, {})  -- Delete all lines
+  vim.cmd('startinsert')  -- Enter Insert mode
+end, { desc = "Clear file and go to insert mode" })
+
+-- Clear file and paste the clipboard+
+vim.keymap.set('n', '<leader>P', function()
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, {}) -- Clear buffer
+  vim.cmd('put +') -- Paste clipboard with formatting
+  vim.api.nvim_buf_set_lines(0, 0, 1, false, {}) -- Remove the first (empty) line
+end, { desc = "Clear file, paste clipboard +, and remove first empty line" })
 
