@@ -93,14 +93,19 @@
     },
     {
     // find in files grep
-     // "key": "space f g",
-     // "command": "workbench.action.findInFiles"
-    //    "when": "vim.active && vim.mode == 'Normal'"
-   //},
+     "key": "space f g",
+     "command": "workbench.action.findInFiles",
+       "when": "vim.active && vim.mode == 'Normal'"
+   },
     // fing file
-    //{
-      //  "key": "space f f",
-       // "command": "workbench.action.quickOpen",
-        //"when": "vim.active && vim.mode == 'Normal'"
-    //},
+    {
+       "key": "space f f",
+       "command": "workbench.action.quickOpen",
+        "when": "vim.active && vim.mode == 'Normal'"
+    },
+      {
+    "key": "space f o",
+    "command": "workbench.action.openGlobalKeybindingsFile",
+    "when": "vim.active && vim.mode == 'Normal'"
+  },
   ]
