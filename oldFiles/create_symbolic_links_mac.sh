@@ -27,6 +27,8 @@ if [ -d ~/.config/nvim/nvim ]; then
     rm -rf ~/.config/nvim/nvim
 fi
 
+mkdir -p ~/.config/nvim
+
 # Create symbolic link for ~/.config/nvim/nvim
 ln -sf ~/x/.dotfiles/nvim ~/.config/nvim/nvim
 
