@@ -1,3 +1,14 @@
+There is much more scripts in the bundle I am using. So making everythung work correctly, follow this steps:
+
+Check out:
+cd ~
+mkdir x
+cd x
+git clone https://github.com/Nimetko/.dotfiles
+cd .dotfiles
+./init.sh
+
+
 just run init.sh script.
 
 When there are some errors with setting up nvim for  the first time.
