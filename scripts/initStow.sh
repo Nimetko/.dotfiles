@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+# Backup any existing dotfiles in HOME and key config folders before adopting
 backup_and_remove() {
     target="$1"
     if [ -e "$target" ] || [ -L "$target" ]; then
@@ -9,23 +10,27 @@ backup_and_remove() {
     fi
 }
 
-# List your top-level dotfiles here
+# Backup main dotfiles
 for file in ~/.zshrc ~/.zshrc_profile ~/.tmux.conf; do
     backup_and_remove "$file"
 done
 
-# VSCode (back up settings.json as example)
+# Backup VSCode settings.json
 backup_and_remove ~/Library/"Application Support"/Code/User/settings.json
 
-# nvim config
-backup_and_remove ~/.config/nvim/nvim
+# Backup nvim config dir (recursively)
+if [ -d ~/.config/nvim ]; then
+    timestamp=$(date +%s)
+    mv ~/.config/nvim ~/.config/nvim.backup_$timestamp
+    echo "Backed up ~/.config/nvim to ~/.config/nvim.backup_$timestamp"
+fi
 
-# Now run stow
-stow -t ~ nvim 
-stow -t ~ tmux
-stow -t ~ zsh
-stow -t ~ zsh_profile
+# Now use --adopt so stow will take over any remaining existing files
+stow --adopt -t ~ nvim 
+stow --adopt -t ~ tmux
+stow --adopt -t ~ zsh
+stow --adopt -t ~ zsh_profile
 
-# vscode
+# VSCode (ensure dir exists first)
 mkdir -p "dotfiles/vscode/Library/Application Support/Code/User"
-stow -t ~ vscode
+stow --adopt -t ~ vscode
