@@ -11,6 +11,7 @@ brew install tmux
 brew install nvim
 brew install ripgrep
 brew install lazygit
+brew install gh
 
 # nice to have
 brew install tldr

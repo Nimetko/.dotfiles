@@ -15,3 +15,4 @@ brew uninstall fzf
 brew uninstall zsh
 brew uninstall ansible
 brew uninstall ranger
+brew uninstall gh
