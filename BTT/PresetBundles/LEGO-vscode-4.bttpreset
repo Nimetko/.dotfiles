@@ -1,0 +1,73 @@
+{
+  "BTTPresetCreatorNotes" : "",
+  "BTTPresetInfoURL" : "",
+  "BTTPresetName" : "LEGO-vscode-4",
+  "BTTPresetColor" : "82.382850, 226.950000, 49.929000, 255.000000",
+  "BTTPresetUUID" : "E86ED864-D2A1-444C-A725-1FF8ABF59CF6",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.L",
+      "BTTAppName" : "Recently Used",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+        {
+          "BTTActionCategory" : 0,
+          "BTTLastUpdatedAt" : 1741598832.0583839,
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTUUID" : "F2E4869D-C22A-4F32-B5E3-147DCC807A50",
+          "BTTPredefinedActionType" : 366,
+          "BTTPredefinedActionName" : "Empty Placeholder",
+          "BTTAdditionalConfiguration" : "1048584",
+          "BTTKeyboardShortcutKeyboardType" : 1825,
+          "BTTTriggerOnDown" : 1,
+          "BTTLayoutIndependentChar" : "4",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : 21,
+          "BTTShortcutModifierKeys" : 1048576,
+          "BTTOrder" : 13,
+          "BTTAutoAdaptToKeyboardLayout" : 0,
+          "BTTAdditionalActions" : [
+            {
+              "BTTActionCategory" : 0,
+              "BTTLastUpdatedAt" : 1741072568.6220999,
+              "BTTTriggerParentUUID" : "F2E4869D-C22A-4F32-B5E3-147DCC807A50",
+              "BTTIsPureAction" : true,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTUUID" : "461933A8-C66E-48A6-839E-5C8021DDA999",
+              "BTTPredefinedActionType" : 49,
+              "BTTPredefinedActionName" : "Launch Application  or  Open File  or  Start Apple Script …",
+              "BTTLaunchPath" : "\/Applications\/Visual Studio Code.app",
+              "BTTKeyboardShortcutKeyboardType" : 0,
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTOrder" : 2,
+              "BTTAutoAdaptToKeyboardLayout" : 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}
