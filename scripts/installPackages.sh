@@ -18,6 +18,7 @@ brew install git-lfs
 brew install tldr
 brew install jp2a
 brew install font-hack-nerd-font
+brew install figlet
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

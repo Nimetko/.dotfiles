@@ -18,3 +18,4 @@ brew uninstall ranger
 brew uninstall gh
 brew uninstall git-lfs
 brew uninstall font-hack-nerd-font
+brew uninstall figlet
