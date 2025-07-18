@@ -1,9 +1,5 @@
-# run this script to update preset bundles BTT profiles
-rm -rf ~/Library/Application\ Support/BetterTouchTool/PresetBundles/*
+# IMPORT
+just Open BTT -> Preset -> Import -> Import from folder .dotfiles/BTT/PresetBundles
 
-mkdir -p ~/PresetBundles
-mv ~/Library/Application\ Support/BetterTouchTool/PresetBundles/* ~/PresetBundles/
-
-Script for updating:
-mkdir -p ~/Library/Application\ Support/BetterTouchTool/PresetBundles && cp -R ~/btt-presets-backup/* ~/Library/Application\ Support/BetterTouchTool/PresetBundles/
-
+# EXPORT
+just Open BTT -> Preset -> Export -> Export to folder .dotfiles/BTT/PresetBundles
