@@ -12,6 +12,7 @@ brew install nvim
 brew install ripgrep
 brew install lazygit
 brew install gh
+brew install git-lfs
 
 # nice to have
 brew install tldr
