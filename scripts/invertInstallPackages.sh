@@ -16,3 +16,4 @@ brew uninstall zsh
 brew uninstall ansible
 brew uninstall ranger
 brew uninstall gh
+brew uninstall font-hack-nerd-font

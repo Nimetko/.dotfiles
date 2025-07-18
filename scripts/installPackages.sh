@@ -16,6 +16,7 @@ brew install gh
 # nice to have
 brew install tldr
 brew install jp2a
+brew install font-hack-nerd-font
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
