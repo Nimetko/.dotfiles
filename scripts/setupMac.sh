@@ -10,4 +10,5 @@ defaults write -g InitialKeyRepeat -int 15
 
 # Not able to remap capslock -> ctrl in an easy transparent way. Do it manually please
 
-
+# remove hold key -> show other key options. Needed in VSCode for moveing with hjkl, holding.
+defaults write -g ApplePressAndHoldEnabled -bool false
