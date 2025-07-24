@@ -31,6 +31,12 @@ if [[ -z "$TMUX" && "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
     tmux attach -t default || tmux new -s default
 fi
 
+# Add pyenv to PATH and initialize it
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
 
 # if [ -f ~/.zsh_profile ]; then
 #   source ~/.zsh_profile
@@ -181,3 +187,5 @@ j() {
 export PATH="/Applications/Rider.app/Contents/MacOS:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/shims:$PATH"
