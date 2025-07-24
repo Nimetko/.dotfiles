@@ -67,11 +67,4 @@ map <Space>e :action CloseAllUnpinnedEditors<CR>
 
 nmap <Leader>y "+y
 
-
-
-
-"vnoremap <Space>cg :action RepeatPreviousRun<CR>
-"nnoremap <Space>cg :action RepeatPreviousRun<CR>
-
-"nnoremap <Space>cr :action ReformatAndCleanup <CR>
-"vnoremap <Space>cr :action ReformatCode <CR>
+nnoremap <Space>fo :e ~/.ideavimrc<CR>
