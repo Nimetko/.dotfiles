@@ -13,6 +13,7 @@ brew install ripgrep
 brew install lazygit
 brew install gh
 brew install git-lfs
+brew install bat
 
 # nice to have
 brew install tldr
