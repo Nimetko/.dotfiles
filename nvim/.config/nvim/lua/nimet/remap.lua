@@ -104,6 +104,8 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Normal mode binding to open tmux sessionizer
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/x/scripts/tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-u>", "<cmd>silent !tmux neww bash -c rmpc<CR>")
+vim.keymap.set("n", "<C-y>", "<cmd>silent !tmux neww bash -c yazi<CR>")
 
 -- Normal mode binding for formatting code using Language Server Protocol
 -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
