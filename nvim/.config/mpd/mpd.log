@@ -1,0 +1,17 @@
+2025-07-24T21:56:02 config: inotify: auto_update was disabled. enable during compilation phase
+2025-07-24T21:56:02 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-07-24T21:56:02 mpg123: mpg123_getformat() failed: Message: I am done with this track.
+2025-07-24T21:56:02 ffmpeg/mp3: Format mp3 detected only with low score of 1, misdetection possible!
+2025-07-24T21:56:02 ffmpeg/mp3: Failed to find two consecutive MPEG audio frames.
+2025-07-24T21:56:02 ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+2025-07-24T21:56:02 ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: moov atom not found
+2025-07-25T14:49:43 config: inotify: auto_update was disabled. enable during compilation phase
+2025-07-25T16:11:13 config: inotify: auto_update was disabled. enable during compilation phase
+2025-07-25T16:29:11 update: added /Chvály z obývačky ｜ Godzone Live zo Španej Doliny.mp3
+2025-07-25T16:31:57 player: played "Chvály z obývačky ｜ Godzone Live zo Španej Doliny.mp3"
+2025-07-25T16:39:09 update: added /DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3
+2025-07-25T16:39:59 player: played "DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3"
+2025-07-25T21:39:25 player: played "DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3"
+2025-07-25T21:40:15 player: played "DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3"
+2025-07-25T22:08:03 update: added /ESPÉ - Na krídlach lásky (Official).mp3
+2025-07-25T22:08:03 update: added /Martin Mitro & Lenka Radvanská ｜ chvály Godzone konferencia 2022.mp3

@@ -1,0 +1,20 @@
+sw_volume: 85
+audio_device_state:1:CoreAudio
+audio_device_state:1:HTTP Stream
+state: pause
+current: 2
+time: 153.27700000000002
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3
+1:Chvály z obývačky ｜ Godzone Live zo Španej Doliny.mp3
+2:ESPÉ - Na krídlach lásky (Official).mp3
+3:Martin Mitro & Lenka Radvanská ｜ chvály Godzone konferencia 2022.mp3
+playlist_end
