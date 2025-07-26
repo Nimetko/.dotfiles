@@ -37,6 +37,8 @@ stow --adopt -t ~ zsh
 stow --adopt -t ~ zsh_profile
 stow --adopt -t ~ ideavim
 stow --adopt -t ~ yazi
+stow --adopt -t ~ mpd
+stow --adopt -t ~ rmpc
 
 # VSCode (ensure directory exists, then stow into $HOME)
 mkdir -p ~/Library/"Application Support"/Code/User
