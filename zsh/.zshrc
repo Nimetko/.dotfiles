@@ -15,6 +15,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export EDITOR=nvim
 
+# RUST Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+
 #Flutter
 export PATH=$HOME/flutter/bin:$PATH
 
@@ -172,6 +176,12 @@ alias lazy="lazygit"
 alias lama="ollama run llama3.2"
 alias llama="ollama run llama3.2"
 
+alias manf="compgen -c | sort -u | fzf | xargs man"
+
+alias vh="~/x/scripts/fzf_listoldfiles.sh"
+alias fh="~/x/scripts/fzf_listoldfiles.sh"
+alias f="~/x/scripts/fzf_listoldfiles.sh"
+
 # Better cd navitation (see last directories) jump
 
 j() {
@@ -189,3 +199,32 @@ export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/shims:$PATH"
+
+
+
+
+# ──────────────────────────────
+# NOTE: FZF Configuration
+# ──────────────────────────────
+
+# Enable key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# FZF default command using `fd`
+export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
+
+# FZF shortcuts for ctrl-t and alt-c
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_ALT_C_COMMAND='fd --type=d --hidden --strip-cwd-prefix --exclude .git'
+
+# Global FZF options
+# export FZF_DEFAULT_OPTS='--height 50% --layout=default --border --color=hl:#2dd4bf'
+
+# FZF window options for tmux (position: 90% width, 70% height)
+# export FZF_TMUX_OPTS='-p 90%,70%'
+# use fullscreen
+# export FZF_TMUX=0
+
+# Previews
+# export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
+# export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"

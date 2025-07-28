@@ -2,7 +2,7 @@
 bindkey -s ^f "~/x/scripts/tmux-sessionizer\n" 
 bindkey -s ^y "yazi\n" 
 bindkey -s ^g "ranger\n" 
-bindkey -s ^u "tmux neww bash -c rmpc\n" 
+# bindkey -s ^u "tmux neww bash -c rmpc\n" 
 # bindkey -s ^f "hello\n" 
 
 echo "Hello from zsh_profile"
