@@ -39,9 +39,16 @@ return {
             vim.keymap.set('n', '<leader>fi', builtin.git_files, {})
             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-            vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
+            vim.keymap.set('n', '<leader>fd', function()
+                require("telescope.builtin").diagnostics({
+                    initial_mode = "normal",
+                })
+            end, {})
             vim.keymap.set("n", "<leader>fe", function()
-                require("telescope.builtin").diagnostics({ severity = vim.diagnostic.severity.ERROR })
+                require("telescope.builtin").diagnostics({
+                    severity = vim.diagnostic.severity.ERROR,
+                    initial_mode = "normal",
+                })
             end, { noremap = true, silent = true })
         end
 
