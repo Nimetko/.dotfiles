@@ -39,6 +39,12 @@ return {
             vim.keymap.set('n', '<leader>fi', builtin.git_files, {})
             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+            vim.keymap.set('n', '<leader>fw', function()
+                require('telescope.builtin').live_grep({
+                    default_text = vim.fn.expand("<cword>"),
+                    initial_mode = "normal",
+                })
+            end)
             vim.keymap.set('n', '<leader>fd', function()
                 require("telescope.builtin").diagnostics({
                     initial_mode = "normal",
