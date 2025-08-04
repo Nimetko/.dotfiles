@@ -1,0 +1,23 @@
+{
+  "global": {
+    "check_for_updates_on_startup": true,
+    "show_in_menu_bar": true,
+    "show_profile_name_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type": "ansi",
+        "country_code": 0
+      },
+      "complex_modifications": {
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 200
+        },
+        "rules": []
+      }
+    }
+  ]
+}

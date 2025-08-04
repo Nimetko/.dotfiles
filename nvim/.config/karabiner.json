@@ -18,23 +18,7 @@
         },
         "rules": [
           {
-            "description": "Remap Caps Lock to Left Control",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "caps_lock"
-                },
-                "to": [
-                  {
-                    "key_code": "left_control"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Vim-style HJKL navigation (hold F as leader, tap F as F)",
+            "description": "Vim-style HJKL arrow navigation (hold F as leader)",
             "manipulators": [
               {
                 "type": "basic",
@@ -47,13 +31,8 @@
                   }
                 },
                 "parameters": {
-                  "basic.to_if_alone_timeout_milliseconds": 200
+                  "basic.simultaneous_threshold_milliseconds": 500
                 },
-                "to_if_alone": [
-                  {
-                    "key_code": "f"
-                  }
-                ],
                 "to": [
                   {
                     "set_variable": {
@@ -68,6 +47,13 @@
                       "name": "vim_nav_mode",
                       "value": 0
                     }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "vim_nav_mode",
+                    "value": 0
                   }
                 ]
               },
@@ -153,52 +139,6 @@
                 "to": [
                   {
                     "key_code": "right_arrow"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "vim_nav_mode",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "o",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "delete_or_backspace"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "vim_nav_mode",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "semicolon",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "return_or_enter"
                   }
                 ],
                 "conditions": [
