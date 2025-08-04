@@ -62,6 +62,12 @@
         "from": { "key_code": "semicolon", "modifiers": { "optional": ["any"] } },
         "to": [ { "key_code": "return_or_enter" } ],
         "conditions": [ { "type": "variable_if", "name": "vim_nav_mode", "value": 1 } ]
+      },
+      {
+        "type": "basic",
+        "from": { "key_code": "i", "modifiers": { "optional": ["any"] } },
+        "to": [ { "key_code": "escape" } ],
+        "conditions": [ { "type": "variable_if", "name": "vim_nav_mode", "value": 1 } ]
       }
     ]
   }
