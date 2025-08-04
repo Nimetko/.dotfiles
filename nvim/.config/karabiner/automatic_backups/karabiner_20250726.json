@@ -1,0 +1,41 @@
+"complex_modifications": {
+  "parameters": {
+    "basic.to_if_alone_timeout_milliseconds": 500
+  },
+  "rules": [
+    {
+      "description": "Tap caps_lock = Esc; hold → Ctrl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_control" }
+          ],
+          "to_if_alone": [
+            { "key_code": "escape" }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Swap Escape to CapsLock",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "caps_lock" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
