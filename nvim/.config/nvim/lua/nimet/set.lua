@@ -1,12 +1,27 @@
 vim.opt.nu = true
 vim.opt.relativenumber = false
 
+------------ INDENTATION ------------
+
+-- Set default (4-space) indentation
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Override for TypeScript
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "typescript", "typescriptreact" },
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.softtabstop = 2
+    vim.opt.shiftwidth = 2
+  end,
+})
+
 vim.opt.smartindent = true -- autoindent new lines
+
+-------------------------------------
 
 vim.opt.wrap = false -- don't wrap lines
 
