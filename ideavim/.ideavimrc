@@ -48,6 +48,8 @@ nnoremap <Space>ff :action GotoFile<CR>
 
 nnoremap <Space>fg :action FindInPath<CR>
 
+nnoremap <Space>fw viw:action FindInPath<CR>
+
 nnoremap <Space>vr :action RenameElement <CR>
 
 map <Space>fa :action GotoAction<CR>
