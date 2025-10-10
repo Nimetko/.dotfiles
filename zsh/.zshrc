@@ -162,6 +162,7 @@ alias gd="git diff"
 alias gl="git log"
 alias ga.="git add ."
 alias grh="git reset --hard"
+alias create_repo="~/x/scripts/gh_create_private_repo.sh"
 
 alias fdevice="/Users/jan/x/scripts/flutter-run-ios.sh" 
 
