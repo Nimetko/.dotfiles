@@ -1,0 +1,3 @@
+token = "569fd4bf1f60fedaf28d5d0d8735b8731d597301"
+default_filter = "(today | overdue)"
+url = "https://api.todoist.com/"

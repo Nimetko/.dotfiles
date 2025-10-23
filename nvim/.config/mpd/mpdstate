@@ -1,9 +1,9 @@
-sw_volume: 85
+sw_volume: 50
 audio_device_state:1:CoreAudio
 audio_device_state:1:HTTP Stream
-state: pause
-current: 2
-time: 153.27700000000002
+state: play
+current: 18
+time: 119.977
 random: 0
 repeat: 0
 single: 0
@@ -13,8 +13,34 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3
-1:Chvály z obývačky ｜ Godzone Live zo Španej Doliny.mp3
-2:ESPÉ - Na krídlach lásky (Official).mp3
+0:Interstellar - Hans Zimmer (Soft Version) Sleep, Study, Relax - 1 Hour.mp3
+1:Požehnanie - GODZONE (Ft. ESPÉ, Katarina Jura).mp3
+2:Milosťou žijem (live) - JEDEN - PiarMusic.mp3
 3:Martin Mitro & Lenka Radvanská ｜ chvály Godzone konferencia 2022.mp3
+4:Jules Verne - Maják na konci sveta (rozhlasová hra ⧸ 1970 ⧸ slovensky).mp3
+5:Ja verím - Godzone, ESPÉ ｜ Worship Nights Live.mp3
+6:DÔVERUJEM ZAS - ESPÉ, KATARÍNA JURA ｜ Godzone tour 2024.mp3
+7:ESPÉ - Buď odvážny (Official).mp3
+8:ESPÉ - Emanuel (Official).mp3
+9:ESPÉ - Na krídlach lásky (Official).mp3
+10:ESPÉ - Návrat (Official).mp3
+11:ESPÉ - Pre Teba áno (Official) 4K.mp3
+12:Godzone Tour 2015 ⧸⧸ Heartbeat ⧸⧸ Verný Boh ⧸⧸ Official Video.mp3
+13:Hýbeš vrchmi - GODZONE  ⧸ Worship Nights.mp3
+14:Interstellar - Hans Zimmer (Soft Version) Sleep, Study, Relax - 1 Hour.mp3
+15:Ja verím - Godzone, ESPÉ ｜ Worship Nights Live.mp3
+16:Jules Verne - Maják na konci sveta (rozhlasová hra ⧸ 1970 ⧸ slovensky).mp3
+17:Martin Mitro & Lenka Radvanská ｜ chvály Godzone konferencia 2022.mp3
+18:Milosťou žijem (live) - JEDEN - PiarMusic.mp3
+19:MÔJ HRIECH TVOJ KRÍŽ - Jakub Slaninka ｜ TWC School LIVESTREAM.mp3
+20:Požehnanie - GODZONE (Ft. ESPÉ, Katarina Jura).mp3
+21:PROSÍM VSTÚP ｜ Timothy a hostia (CF2018 hymna OFFICIAL).mp3
+22:Rain Sound On Window with Thunder SoundsㅣHeavy Rain for Sleep, Study and Relaxation, Meditation.mp3
+23:Timothy - MOJE PERY ⧸o,o,o ja Ťa milujem⧸ ｜ OFFICIAL.mp3
+24:V TEBE ZAČÍNAM - GODZONE, ESPÉ ｜ GODZONE TOUR 2022.mp3
+25:Verný Si ：： LCH LIVE!.mp3
+26:Bližšie.mp3
+27:Dôverujem Zas.mp3
+28:Náš Boh.mp3
+29:Po Celý Svoj Život.mp3
 playlist_end

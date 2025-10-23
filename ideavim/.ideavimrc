@@ -70,3 +70,5 @@ map <Space>e :action CloseAllUnpinnedEditors<CR>
 nmap <Leader>y "+y
 
 nnoremap <Space>fo :e ~/.ideavimrc<CR>
+
+map <Leader>to :action RerunTests<CR>
