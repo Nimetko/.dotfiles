@@ -1,3 +1,4 @@
+print("Hello from server.lua")
 local M = {}
 
 M.setup_servers = function(on_attach, capabilities)

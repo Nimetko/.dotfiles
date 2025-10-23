@@ -1,5 +1,5 @@
 -- folowing typecraft ... https://www.youtube.com/watch?v=S-xzYgTLVJE&t=884s&ab_channel=typecraft
-        print("Hello from lazy/lsp-config.lua")
+        -- print("Hello from lazy/lsp-config.lua")
 return {
     {
         -- https://github.com/williamboman/mason.nvim
@@ -24,7 +24,11 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "ts_ls" }
+                ensure_installed = {
+                    "lua_ls",
+                    "ts_ls",
+                    "omnisharp",
+                }
             })
         end
     },
@@ -34,19 +38,25 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
             -- setting setup for different languages
-            -- lspconfig.lua_ls.setup({})
-            -- lspconfig.ts_ls.setup({})
+            lspconfig.lua_ls.setup({})
+            lspconfig.ts_ls.setup({})
+                        -- C#
+            lspconfig.omnisharp.setup({
+                cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+                root_dir = lspconfig.util.root_pattern("*.sln", "*.csproj", ".git"),
+                settings = {
+                    FormattingOptions = {
+                        EnableEditorConfigSupport = true,
+                    },
+                    Sdk = {
+                        IncludePrereleases = true,
+                    },
+                },
+            })
 
         local keymaps = require("nimet.lazy.lsp.keymaps")
         local opts = { noremap=true, silent=true}
-        -- local opts = { noremap=true, silent=true, buffer=bufnr }
         keymaps.setup_lsp_keymaps(opts)
-        -- local keymaps = require("nimet.lazy.lsp.keymaps")
-            -- vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
-
-    --     local on_attach = function(client, bufnr)
-    --         local opts = { noremap=true, silent=true, buffer=bufnr }
-    --         keymaps.setup_lsp_keymaps(opts)
         ----------------- SNIPSETS -----------------
         require("nimet.lazy.lsp.cmp_config").setup_cmp()
 

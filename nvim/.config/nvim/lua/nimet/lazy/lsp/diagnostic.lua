@@ -1,8 +1,13 @@
 local M = {}
 
 function M.setup_diagnostics()
+    -- print("my own diagnostic setup")
     vim.diagnostic.config({
-        update_in_insert = true,  -- Update diagnostics while in insert mode
+        virtual_text = true,
+        update_in_insert = false,  -- Update diagnostics while in insert mode
+        signs = true,
+        underline = true,
+        severity_sort = true,
         float = {  -- Configure floating diagnostic windows
             focusable = false,   -- The floating window cannot be focused
             style = "minimal",   -- Minimalistic floating window
@@ -10,6 +15,9 @@ function M.setup_diagnostics()
             source = "always",   -- Always show the source of the diagnostic
             header = "",         -- No header in the floating window
             prefix = "",         -- No prefix for diagnostic messages
+            -- signs = true,
+            -- underline = true,
+            -- virtual_text = true
         },
     })
 end
