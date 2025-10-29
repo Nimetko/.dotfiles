@@ -184,6 +184,7 @@ alias fh="~/x/scripts/fzf_listoldfiles.sh"
 alias f="~/x/scripts/fzf_listoldfiles.sh"
 alias kill_all="~/x/scripts/kill-all-but-terminal.sh"
 alias kill-all="~/x/scripts/kill-all-but-terminal.sh"
+alias clean-desktop="~/x/scripts/./move_desktop_to_documents.sh"
 
 # Better cd navitation (see last directories) jump
 
