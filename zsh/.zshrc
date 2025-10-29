@@ -182,6 +182,8 @@ alias manf="compgen -c | sort -u | fzf | xargs man"
 alias vh="~/x/scripts/fzf_listoldfiles.sh"
 alias fh="~/x/scripts/fzf_listoldfiles.sh"
 alias f="~/x/scripts/fzf_listoldfiles.sh"
+alias kill_all="~/x/scripts/kill-all-but-terminal.sh"
+alias kill-all="~/x/scripts/kill-all-but-terminal.sh"
 
 # Better cd navitation (see last directories) jump
 
