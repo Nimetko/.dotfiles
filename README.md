@@ -1,25 +1,22 @@
-prerequesited on new mac:
-Install brew:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Quick setup (macOS)
 
-Install git:
-brew install git
+- Prereqs: Homebrew and Git
+  - Install Homebrew (if missing):
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+  - Install Git (if missing): `brew install git`
 
-There is much more scripts in the bundle I am using. So making everythung work correctly, follow this steps:
+- Clone repo
+  - `mkdir -p ~/x && cd ~/x`
+  - `git clone https://github.com/Nimetko/.dotfiles`
+  - `cd .dotfiles`
 
-Check out:
-cd ~
-mkdir x
-cd x
-git clone https://github.com/Nimetko/.dotfiles
-cd .dotfiles
-./init.sh
+- Full setup (installs tools + stows configs)
+  - `./init.sh`
 
+- Just stow configs (no package installs)
+  - Ensure GNU Stow is available (if not): `brew install stow`
+  - Run stow only: `./scripts/initStow.sh`
 
-just run init.sh script.
-
-When there are some errors with setting up nvim for  the first time.
-Try to delete this foder: ~/.local/share/nvim
-This will remove all packer stuff since we moved to lazy packer manager.
-
-TODO: use ansible. Make it for linux subsystem as well.
+Notes
+- Neovim: if you hit plugin bootstrap issues, try `rm -rf ~/.local/share/nvim` and re-open nvim.
+- Hammerspoon: configs are linked to `~/.hammerspoon`. If you previously used `~/Spoons`, the script migrates contents for you.

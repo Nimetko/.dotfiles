@@ -24,8 +24,17 @@ if [ -d ~/.config/nvim ]; then
     backup_and_remove ~/.config/nvim
 fi
 
-# Clean up old Hammerspoon layout if present
-if [ -e ~/Spoons ] || [ -L ~/Spoons ]; then
+# Migrate legacy Hammerspoon layout if present
+if [ -d ~/Spoons ]; then
+    # Move contents into the proper location
+    mkdir -p ~/.hammerspoon/Spoons
+    shopt -s dotglob nullglob
+    mv -n ~/Spoons/* ~/.hammerspoon/Spoons/ 2>/dev/null || true
+    shopt -u dotglob nullglob
+    # Remove the old directory if empty, otherwise back it up
+    rmdir ~/Spoons 2>/dev/null || backup_and_remove ~/Spoons
+elif [ -L ~/Spoons ]; then
+    # Backup old symlink if it exists
     backup_and_remove ~/Spoons
 fi
 
