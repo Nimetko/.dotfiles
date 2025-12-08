@@ -18,18 +18,21 @@ hs.alert.show("Config loaded")
 local appBarConfigs = {
     ["ChatGPT"]       = { h = 37, bottom = 2, hideButtons = false },
     ["Google Chrome"] = { h = 4,  bottom = 4, hideButtons = true  },
-    ["iTerm2"]        = { h = 28, bottom = 5, hideButtons = false },
+    -- we don't need for iTerm2, settings no native full screen is supporting this
+    -- ["iTerm2"]        = { h = 28, bottom = 5, hideButtons = false },
 }
 
--- 5 drawing objects
-local topBar, leftBar, rightBar, bottomBar, buttonsCover = nil, nil, nil, nil, nil
+-- 6 drawing objects
+local topBar, leftBar, rightBar, bottomBar, buttonsCover, buttonsCover2 =
+    nil, nil, nil, nil, nil, nil
 
 local function deleteBars()
-    if topBar       then topBar:delete();       topBar = nil       end
-    if leftBar      then leftBar:delete();      leftBar = nil      end
-    if rightBar     then rightBar:delete();     rightBar = nil     end
-    if bottomBar    then bottomBar:delete();    bottomBar = nil    end
-    if buttonsCover then buttonsCover:delete(); buttonsCover = nil end
+    if topBar        then topBar:delete();        topBar = nil        end
+    if leftBar       then leftBar:delete();       leftBar = nil       end
+    if rightBar      then rightBar:delete();      rightBar = nil      end
+    if bottomBar     then bottomBar:delete();     bottomBar = nil     end
+    if buttonsCover  then buttonsCover:delete();  buttonsCover = nil  end
+    if buttonsCover2 then buttonsCover2:delete(); buttonsCover2 = nil end
 end
 
 local function updateTopBarForApp(appName)
@@ -114,17 +117,18 @@ local function updateTopBarForApp(appName)
     bottomBar:show()
 
     --------------------------------------------------
-    -- COVER WINDOW BUTTONS (traffic lights)
+    -- COVERS (traffic lights) – LEFT & RIGHT
     --------------------------------------------------
     if cfg.hideButtons then
-        -- tweak these to perfectly cover the 3 dots on your setup
-        local coverWidth  = 90      -- wide enough for all three buttons
-        -- local coverHeight = cfg.h   -- or e.g. 26
-        local coverHeight = 36   -- or e.g. 26
+        --------------------------------------------------
+        -- LEFT COVER (pôvodný, cez 3 tlačidlá)
+        --------------------------------------------------
+        local coverWidth  = 90
+        local coverHeight = 36
 
         local buttonsFrame = {
-            x = frame.x,            -- left edge
-            y = frame.y,            -- top edge of app content
+            x = frame.x,    -- left edge
+            y = frame.y,    -- top edge of app content
             w = coverWidth,
             h = coverHeight,
         }
@@ -135,6 +139,26 @@ local function updateTopBarForApp(appName)
         buttonsCover:setLevel(hs.drawing.windowLevels.floating)
         buttonsCover:setBehavior(hs.drawing.windowBehaviors.canJoinAllSpaces)
         buttonsCover:show()
+
+        --------------------------------------------------
+        -- RIGHT COVER (nový buttonsCover2)
+        --------------------------------------------------
+        local coverWidth2  = 120   -- iné rozmery ako vľavo
+        local coverHeight2 = 36    -- pokojne zmeň podľa oka
+
+        local buttonsFrame2 = {
+            x = frame.x + frame.w - coverWidth2, -- nalepené na pravý okraj
+            y = frame.y,
+            w = coverWidth2,
+            h = coverHeight2,
+        }
+
+        buttonsCover2 = hs.drawing.rectangle(buttonsFrame2)
+        buttonsCover2:setFillColor({ red = 0, green = 0, blue = 0, alpha = 1 })
+        buttonsCover2:setStroke(false)
+        buttonsCover2:setLevel(hs.drawing.windowLevels.floating)
+        buttonsCover2:setBehavior(hs.drawing.windowBehaviors.canJoinAllSpaces)
+        buttonsCover2:show()
     end
 end
 
