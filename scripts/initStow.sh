@@ -24,6 +24,11 @@ if [ -d ~/.config/nvim ]; then
     backup_and_remove ~/.config/nvim
 fi
 
+# Clean up old Hammerspoon layout if present
+if [ -e ~/Spoons ] || [ -L ~/Spoons ]; then
+    backup_and_remove ~/Spoons
+fi
+
 # Now use stow from the repo root (this puts .config/nvim into your home .config/nvim)
 cd "$(dirname "$0")/.."  # Go to repo root from scripts/
 # Or manually: cd ~/x/.dotfiles
@@ -36,13 +41,21 @@ stow --adopt -t ~ tmux
 stow --adopt -t ~ zsh
 stow --adopt -t ~ zsh_profile
 stow --adopt -t ~ ideavim
-stow --adopt -t ~ yazi
-stow --adopt -t ~ mpd
-stow --adopt -t ~ rmpc
+stow --adopt -t ~ ranger
+stow --adopt -t ~ hammerspoon
+
+# Optional packages (uncomment if you use them)
+# stow --adopt -t ~ yazi
+# stow --adopt -t ~ mpd
+# stow --adopt -t ~ rmpc
+# stow --adopt -t ~ gh
+# stow --adopt -t ~ karabiner
+# stow --adopt -t ~ mc
+# stow --adopt -t ~ doist
+# stow --adopt -t ~ flutter
 
 # VSCode (ensure directory exists, then stow into $HOME)
 mkdir -p ~/Library/"Application Support"/Code/User
 stow --adopt -t ~ vscode
 
 echo "All done!"
-
