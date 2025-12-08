@@ -184,6 +184,7 @@ alias fh="~/x/scripts/fzf_listoldfiles.sh"
 alias f="~/x/scripts/fzf_listoldfiles.sh"
 alias kill_all="~/x/scripts/kill-all-but-terminal.sh"
 alias kill-all="~/x/scripts/kill-all-but-terminal.sh"
+alias reset-all-app-processes="~/x/scripts/kill-all-but-terminal.sh"
 alias clean-desktop="~/x/scripts/./move_desktop_to_documents.sh"
 
 # Better cd navitation (see last directories) jump
@@ -233,3 +234,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 # export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 export PATH="$PATH:/opt/homebrew/Caskroom/flutter/latest/flutter/bin"
+
+# Added by Antigravity
+export PATH="/Users/jabo/.antigravity/antigravity/bin:$PATH"
