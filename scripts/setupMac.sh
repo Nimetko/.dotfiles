@@ -12,3 +12,7 @@ defaults write -g InitialKeyRepeat -int 15
 
 # remove hold key -> show other key options. Needed in VSCode for moveing with hjkl, holding.
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+# remove tiled windows (from desktop & Dock -> Tiled windows  have margin -> fase)
+defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
+
