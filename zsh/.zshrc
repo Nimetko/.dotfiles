@@ -30,10 +30,13 @@ export PATH="$HOME/.dotnet:$PATH"
 # if [ -z "$TMUX" ]; then
 #     tmux attach -t default || tmux new -s default
 # fi
+
+
+
 # Start tmux automatically ONLY when using Terminal.app
-if [[ -z "$TMUX" && "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-    tmux attach -t default || tmux new -s default
-fi
+# if [[ -z "$TMUX" && "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+#     tmux attach -t default || tmux new -s default
+# fi
 
 # Add pyenv to PATH and initialize it
 export PYENV_ROOT="$HOME/.pyenv"
@@ -186,6 +189,47 @@ alias kill_all="~/x/scripts/kill-all-but-terminal.sh"
 alias kill-all="~/x/scripts/kill-all-but-terminal.sh"
 alias reset-all-app-processes="~/x/scripts/kill-all-but-terminal.sh"
 alias clean-desktop="~/x/scripts/./move_desktop_to_documents.sh"
+
+# ALIAS ghnew
+#
+# Ensure no alias collides with the function name (zsh will error otherwise)
+unalias ghnew 2>/dev/null
+
+ghnew() {
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    echo "Usage: ghnew <repo-name>"
+    return 1
+  fi
+
+  # Ensure git uses gh credentials
+  echo "Ensuring git uses gh auth..."
+  gh auth setup-git -q || return 1
+
+  # 1) Ensure we are in a git repo
+  if [[ ! -d .git ]]; then
+    echo "🔧 Initializing git repository..."
+    git init || return 1
+  fi
+
+  # 2) Ensure at least one commit exists (gh --push requires it)
+  if ! git rev-parse --verify HEAD >/dev/null 2>&1; then
+    echo "📝 No commits found — creating initial commit..."
+
+    # Stage changes (if any). If nothing to commit, create an empty commit.
+    git add -A
+
+    if git diff --cached --quiet; then
+      # Nothing staged -> allow empty commit so gh can push
+      git commit --allow-empty -m "Initial empty commit" || return 1
+    else
+      git commit -m "Initial commit" || return 1
+    fi
+  fi
+
+  # 3) Create repo + add remote + push
+  gh repo create "$repo" --private --source=. --remote=origin --push
+}
 
 # Better cd navitation (see last directories) jump
 
