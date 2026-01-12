@@ -1,0 +1,86 @@
+model = "gpt-5.2-codex"
+model_reasoning_effort = "medium"
+notify = ["bash", "-lc", "~/.codex/hooks/ding.sh"]
+
+[projects."/Users/jabo/Projects/movie_vocab/.git/modules"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Codex_Flutter"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/policy-analysis-reasoning-api"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Codex/Test_app_1"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Codex/Silo_app"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Codex/Silo_flutter_app"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Codex/speech-improver-starter"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/x/scripts"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/movie_vocab"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/python_script_aws"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/python_script_aws-changed"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/python_script_aws-changed-not-python"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/geco-leaf-aggregation-service"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/code-map-test"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/Atops"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/unity-swift-example-my-impl"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/LEGO/LEAF-master"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/ai-challenges/Multipy-agent-test"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/.codex"]
+trust_level = "untrusted"
+
+[projects."/Users/jabo/.codex/sounds/RA2"]
+trust_level = "untrusted"
+
+[projects."/Users/jabo/x/.dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/ai-challenges"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/ai-challenges/web-no-web"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/movie-vocab-flutter"]
+trust_level = "trusted"
+
+[projects."/Users/jabo/Projects/ai-challenges/cli-timer"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.2" = "gpt-5.2-codex"
+
+[features]
+shell_snapshot = true
+unified_exec = true
