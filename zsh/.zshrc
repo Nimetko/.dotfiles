@@ -204,7 +204,7 @@ ghnew() {
 
   # Ensure git uses gh credentials
   echo "Ensuring git uses gh auth..."
-  gh auth setup-git -q || return 1
+  gh auth setup-git || return 1
 
   # 1) Ensure we are in a git repo
   if [[ ! -d .git ]]; then
