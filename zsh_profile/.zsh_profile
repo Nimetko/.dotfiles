@@ -5,6 +5,6 @@ bindkey -s ^g "ranger\n"
 # bindkey -s ^u "tmux neww bash -c rmpc\n" 
 # bindkey -s ^f "hello\n" 
 
-echo "Hello from zsh_profile"
+# echo "Hello from zsh_profile" in iterm2 we need to remove this
 
 # alias v="nvim"
