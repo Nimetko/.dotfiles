@@ -121,7 +121,7 @@ local function updateTopBarForApp(appName)
     --------------------------------------------------
     if cfg.hideButtons then
         --------------------------------------------------
-        -- LEFT COVER (pôvodný, cez 3 tlačidlá)
+        -- LEFT COVER 
         --------------------------------------------------
         local coverWidth  = 90
         local coverHeight = 36
@@ -141,13 +141,13 @@ local function updateTopBarForApp(appName)
         buttonsCover:show()
 
         --------------------------------------------------
-        -- RIGHT COVER (nový buttonsCover2)
+        -- RIGHT COVER
         --------------------------------------------------
-        local coverWidth2  = 120   -- iné rozmery ako vľavo
-        local coverHeight2 = 36    -- pokojne zmeň podľa oka
+        local coverWidth2  = 84
+        local coverHeight2 = 36
 
         local buttonsFrame2 = {
-            x = frame.x + frame.w - coverWidth2, -- nalepené na pravý okraj
+            x = frame.x + frame.w - coverWidth2,
             y = frame.y,
             w = coverWidth2,
             h = coverHeight2,
