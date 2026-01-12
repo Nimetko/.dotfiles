@@ -52,6 +52,7 @@ stow --adopt -t ~ zsh_profile
 stow --adopt -t ~ ideavim
 stow --adopt -t ~ ranger
 stow --adopt -t ~ hammerspoon
+stow --adopt -t ~ codex
 
 # Optional packages (uncomment if you use them)
 # stow --adopt -t ~ yazi

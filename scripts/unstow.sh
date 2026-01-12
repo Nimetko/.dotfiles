@@ -4,6 +4,7 @@ stow -D -t ~ zsh
 stow -D -t ~ zsh_profile
 stow -D -t ~ ranger
 stow -D -t ~ hammerspoon
+stow -D -t ~ codex
 stow -D -t ~ vscode
 
 # Remove legacy Hammerspoon symlink if it exists
