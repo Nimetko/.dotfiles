@@ -53,3 +53,19 @@ vim.opt.isfname:append("@-@") -- allow @ in filenames
 
 vim.opt.updatetime = 50 -- update interval for gitsigns, default: 4000
 vim.wo.colorcolumn = "80" -- set color column to 80 characters
+
+
+-- TMUX HARPOON
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "favorite-sessions",
+  callback = function()
+    -- UI tweaks
+    vim.opt_local.number = true
+    vim.opt_local.relativenumber = false
+    vim.opt_local.wrap = false
+
+    -- ESC exits
+    vim.keymap.set("n", "<Esc>", "<cmd>q<CR>", { buffer = true })
+    vim.keymap.set("n", "q", "<cmd>q<CR>", { buffer = true })
+  end,
+})
